@@ -9,7 +9,6 @@ public class Roles implements Serializable {
     private String rolename;
     private String rolemessage;
     private String[] rolepower;
-
     public String[] getRolepower() {
         return rolepower;
     }
