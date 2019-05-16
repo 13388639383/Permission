@@ -8,20 +8,20 @@ public class Roles implements Serializable {
     private int id;
     private String rolename;
     private String rolemessage;
-    private String[] rolepower;
-    public String[] getRolepower() {
-        return rolepower;
-    }
+    private String addpower;
+    private String delpower;
+    private String updpower;
+    private String chepower;
 
-    public void setRolepower(String[] rolepower) {
-        this.rolepower = rolepower;
-    }
 
-    public Roles(int id, String rolename, String rolemessage, String[] rolepower) {
+    public Roles(int id, String rolename, String rolemessage, String addpower,String delpower,String updpower,String chepower) {
         this.id = id;
         this.rolename = rolename;
         this.rolemessage = rolemessage;
-        this.rolepower = rolepower;
+        this.addpower = addpower;
+        this.delpower = delpower;
+        this.updpower = updpower;
+        this.chepower = chepower;
     }
     public Roles(){
 
@@ -51,5 +51,35 @@ public class Roles implements Serializable {
         this.rolemessage = rolemessage;
     }
 
+    public String getAddpower() {
+        return addpower;
+    }
 
+    public void setAddpower(String addpower) {
+        this.addpower = addpower;
+    }
+
+    public String getDelpower() {
+        return delpower;
+    }
+
+    public void setDelpower(String delpower) {
+        this.delpower = delpower;
+    }
+
+    public String getUpdpower() {
+        return updpower;
+    }
+
+    public void setUpdpower(String updpower) {
+        this.updpower = updpower;
+    }
+
+    public String getChepower() {
+        return chepower;
+    }
+
+    public void setChepower(String chepower) {
+        this.chepower = chepower;
+    }
 }

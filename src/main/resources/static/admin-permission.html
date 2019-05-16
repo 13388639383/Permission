@@ -133,16 +133,19 @@
 				$.each(json, function (key,word) {
 					var id = json[key].id;
 					var rolename = json[key].rolename;
-					var rolepower = [];
+					var role1 = json[key].addpower;
+					var role2 = json[key].delpower;
+					var role3 = json[key].updpower;
+					var role4 = json[key].chepower;
 					$('tbody.new').append(
 							'<tr class="text-c">'+
 							'<td><input type="checkbox" value="" name=""></td>'+
 							'<td id="roleId">'+id+'</td>'+
 							'<td>'+rolename+'</td>'+
-							'<td>'+rolepower[0]+'</td>'+
-							'<td>'+rolepower[1]+'</td>'+
-							'<td>'+rolepower[2]+'</td>'+
-							'<td>'+rolepower[3]+'</td>'+
+							'<td>'+role1+'</td>'+
+							'<td>'+role2+'</td>'+
+							'<td>'+role3+'</td>'+
+							'<td>'+role4+'</td>'+
 							'<td class="f-14"><a title="编辑" href="javascript:;" onclick="" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> <a id="ml-5" title="删除" href="javascript:;" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont" id="Hui-iconfont">&#xe6e2;</i></a></td>'+
 							'</tr>'
 					);

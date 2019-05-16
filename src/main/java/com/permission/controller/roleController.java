@@ -53,7 +53,7 @@ public class roleController {
     public ResponseResult<Boolean> addRole(@RequestBody Roles roles) {
         ResponseResult<Boolean> roleResult = new ResponseResult<>();
         try {
-            boolean result = rolesService.addRoles(roles.getRolename(), roles.getRolemessage(),roles.getRolepower());
+            boolean result = rolesService.addRoles(roles.getRolename(), roles.getRolemessage(),roles.getAddpower(),roles.getDelpower(),roles.getUpdpower(),roles.getChepower());
             if (result) {
                 roleResult.setMessage("添加角色成功");
                 roleResult.setData(true);

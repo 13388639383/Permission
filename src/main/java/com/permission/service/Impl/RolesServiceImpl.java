@@ -22,11 +22,7 @@ public class RolesServiceImpl implements RolesService {
     }
 
     @Override
-    public boolean addRoles(String rolename, String rolemessage, String[] rolespower) {
-        String role1 = rolespower[0];
-        String role2 = rolespower[1];
-        String role3 = rolespower[2];
-        String role4 = rolespower[3];
+    public boolean addRoles(String rolename, String rolemessage, String role1, String role2, String role3, String role4) {
         RoleLoger.info(role1+role2+role3+role4);
         return dateBaseDAO.addRoles(rolename,rolemessage,role1,role2,role3,role4);
     }

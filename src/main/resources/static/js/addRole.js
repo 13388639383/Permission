@@ -4,10 +4,22 @@ $(function(){
 
         var rolename = $('#rolename').val();
         var rolemessage = $('#rolemessage').val();
-        var rolepower = ['N','N','N','N'];
-            $("input[name='user-Character-0-0-0']:checked").each(function(i){
-                rolepower[i] = 'Y';
-            });
+        var addpower = 'N';
+        var delpower = 'N';
+        var updpower = 'N';
+        var chepower = 'N';
+        if($("#user-Character-0-0-0").is(":checked")){
+            addpower = 'Y';
+        }
+        if($("#user-Character-0-0-1").is(":checked")){
+            delpower = 'Y';
+        }
+        if($("#user-Character-0-0-2").is(":checked")){
+            updpower = 'Y';
+        }
+        if($("#user-Character-0-0-3").is(":checked")){
+            chepower = 'Y';
+        }
 
         if(rolename==''||rolemessage==''){
             layer.msg('信息不能为空');
@@ -15,7 +27,10 @@ $(function(){
             var roleData = {
                 rolename:rolename,
                 rolemessage:rolemessage,
-                rolepower:rolepower
+                addpower:addpower,
+                delpower:delpower,
+                updpower:updpower,
+                chepower:chepower
             }
             $.ajax({
                 url: '/addrole',
